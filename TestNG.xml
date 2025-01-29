@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Parallel Testing Suite" parallel="methods" thread-count="1" data-provider-thread-count="1">
+
+  <!--   <groups>
+        <run>
+            <include name="windowTest"/>
+        </run>
+    </groups>-->
+
+  <!--  <listeners>
+        <listener class-name="listners.MyTestListner"/>
+        <listener class-name="listners.AnnotationTransformer"/>
+    </listeners>-->
+
+    <parameter name="environment" value="https://www.google.com/"/>
+
+    <test name = "Smoke Test 1 Group" >
+        <classes>
+            <class name = "TestClasses.TestNGTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>
+
