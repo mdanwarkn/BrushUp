@@ -22,7 +22,9 @@ public class TestNGTest {
     @Test(groups="windowTest")
     public void windowTest() throws InterruptedException {
         System.out.println("test Method 1");
+        System.out.println("test Method 2");
         Assert.assertTrue(false);
+
     }
 
     @Test(dependsOnGroups = "windowTest" , alwaysRun = true)
