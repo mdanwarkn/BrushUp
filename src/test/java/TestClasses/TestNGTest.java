@@ -28,6 +28,8 @@ public class TestNGTest {
     @Test(dependsOnGroups = "windowTest" , alwaysRun = true)
     public void internalTest() throws InterruptedException {
         System.out.println("test Method 2");
+        System.out.println("test Method 3");
+
     }
 
 }
