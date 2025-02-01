@@ -39,7 +39,12 @@ public class TestNGTest {
             option.addArguments("--start-maximized");
             WebDriver driver = new RemoteWebDriver(url , option);
             driver.navigate().to("https://cucumber.io/");
+            Thread.sleep(5000);
+            System.out.println("Remote web driver");
+            driver.close();
     }
+
+
 
 }
 
