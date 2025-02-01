@@ -20,7 +20,11 @@ public class Utils {
         Random random = new Random();
         int v = random.nextInt(10);
 
-        TakesScreenshot takeScreenshot = (TakesScreenshot) (ThreadManager.getDriver());
+        WebDriver driver = ThreadManager.getDriver();
+        if(driver==null){
+            return;
+        }
+        TakesScreenshot takeScreenshot = (TakesScreenshot) (driver);
         File file = takeScreenshot.getScreenshotAs(OutputType.FILE);
         String path = System.getProperty("user.dir")+ File.separator + "Screenshot"+File.separator+v+"7.png";
         File dest = new File(path);
